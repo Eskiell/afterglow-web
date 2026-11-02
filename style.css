@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  color: #00ff9f;
+  overflow: hidden;
+}
+
 #matrix {
   position: fixed;
   top: 0;
@@ -7,11 +23,63 @@
   z-index: -1;
 }
 
-body {
-  background: transparent !important;
+.content {
+  text-align: center;
+  z-index: 1;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 255, 159, 0.2);
+  box-shadow: 0 0 40px rgba(0, 255, 100, 0.15);
 }
 
-.panel, #brand {
-  background: rgba(14, 17, 22, 0.85) !important;
-  backdrop-filter: blur(4px);
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 12px #00ff9f);
 }
+
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px #00ff9f;
+}
+
+.subtitle {
+  color: #a0ffd0;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.count {
+  margin-bottom: 20px;
+  font-family: monospace;
+  color: #00ff9f;
+  min-height: 1.2em;
+}
+
+#startBtn {
+  background: transparent;
+  border: 2px solid #00ff9f;
+  color: #00ff9f;
+  padding: 12px 36px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+#startBtn:hover {
+  background: #00ff9f;
+  color: #000;
+  box-shadow: 0 0 20px #00ff9f;
+}
+Guarda ambos archivos y recarga la página.
+Ahora es una sola pantalla centrada con el Matrix de fondo y un estilo más limpio y moderno.
+
+
