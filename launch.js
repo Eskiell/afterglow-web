@@ -1,4 +1,4 @@
-/* Simplified: always GoldHEN + automatic start */
+/* Fully automatic - GoldHEN */
 
 var AUTOSTART_SECONDS = 5;
 var countEl = document.getElementById("count");
@@ -29,9 +29,6 @@ function startClock() {
   }, 1000);
 }
 
-document.getElementById("startBtn").addEventListener("click", start);
-
-// Autostart unless the run already finished
 var DONE = false;
 try {
   DONE = new URLSearchParams(location.search).get("afterglow") === "done";
@@ -42,9 +39,3 @@ if (DONE) {
 } else {
   startClock();
 }
-Guarda con Commit changes.
-Cuando hagas los dos (HTML + launch.js), la página quedará automática.
-
-
-
-
