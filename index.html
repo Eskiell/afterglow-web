@@ -19,4 +19,24 @@
     <script src="matrix.js"></script>
     <script src="launch.js"></script>
   </body>
+  <script>
+  if (window.applicationCache) {
+    const app = window.applicationCache;
+    const count = document.getElementById("count");
+    app.addEventListener("downloading", () => {
+      if (count) count.textContent = "Guardando caché...";
+    });
+    app.addEventListener("progress", e => {
+      if (count && e.lengthComputable) {
+        count.textContent = "Guardando caché... " + Math.round(e.loaded / e.total * 100) + "%";
+      }
+    });
+    app.addEventListener("cached", () => {
+      if (count) count.textContent = "Caché listo. Iniciando...";
+    });
+    app.addEventListener("noupdate", () => {
+      if (count) count.textContent = "Caché listo. Iniciando...";
+    });
+  }
+</script>
 </html>
